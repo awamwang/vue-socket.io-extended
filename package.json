@@ -1,6 +1,6 @@
 {
   "name": "@awamwang/vue-socket.io-extended",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Socket.io bindings for Vue.js and Vuex (inspired by Vue-Socket.io)",
   "main": "dist/vue-socket.io-ext.min.js",
   "module": "dist/vue-socket.io-ext.esm.js",
@@ -16,6 +16,7 @@
     "lint": "eslint scripts src",
     "release": "bash scripts/release.sh",
     "release:note": "node scripts/gen-release-note.js",
+    "prepublishOnly": "npm run build",
     "build": "rollup -c scripts/rollup-build.js"
   },
   "repository": {
