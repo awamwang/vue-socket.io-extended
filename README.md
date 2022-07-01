@@ -24,8 +24,9 @@
 </p>
 
 
-> :warning: [The alpha version of v5](https://github.com/probil/vue-socket.io-extended/tree/alpha) (with Vue 3 support) has been released. Your feedback would be appreciated [here](https://github.com/probil/vue-socket.io-extended/issues/489) 
+> :warning: [The alpha version of v5](https://github.com/probil/vue-socket.io-extended/tree/alpha) (with Vue 3 support) has been released. Your feedback would be appreciated [here](https://github.com/probil/vue-socket.io-extended/issues/489)
 
+'''继承自[robil/vue-socket.io-extended](https://github.com/probil/vue-socket.io-extended#readme)，更新依赖，修复socket.io-client问题
 
 ## :cherries: Features
 
@@ -336,7 +337,7 @@ Here they are:
 | `mutationPrefix` | `String` | `'SOCKET_'` | Prepend to event name while converting event to mutation. Empty string disables prefixing |
 | `eventToMutationTransformer` | `Function` `string => string` | uppercase function | Determines how event name converted to mutation |
 | `eventToActionTransformer` | `Function` `string => string` | camelcase function | Determines how event name converted to action |
-| eventMapping | `Function` `socket => string` | | Map your event from socket event data 
+| eventMapping | `Function` `socket => string` | | Map your event from socket event data
 
 *FYI:* You can always access default plugin options if you need it (e.g. re-use default `eventToActionTransformer` function):
 

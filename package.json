@@ -1,6 +1,6 @@
 {
-  "name": "vue-socket.io-extended",
-  "version": "0.0.0-semantically-released",
+  "name": "@awamwang/vue-socket.io-extended",
+  "version": "0.0.1",
   "description": "Socket.io bindings for Vue.js and Vuex (inspired by Vue-Socket.io)",
   "main": "dist/vue-socket.io-ext.min.js",
   "module": "dist/vue-socket.io-ext.esm.js",
@@ -12,7 +12,7 @@
     "./decorator": "./dist/vue-socket.io-ext.decorator.esm.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest -env=jsdom",
     "lint": "eslint scripts src",
     "release": "bash scripts/release.sh",
     "release:note": "node scripts/gen-release-note.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/probil/vue-socket.io-extended.git"
+    "url": "git+https://github.com/awamwang/vue-socket.io-extended.git"
   },
   "files": [
     "dist/",
@@ -29,7 +29,9 @@
   "typings": "types/index.d.ts",
   "typesVersions": {
     "*": {
-      "decorator": ["types/decorator.d.ts"]
+      "decorator": [
+        "types/decorator.d.ts"
+      ]
     }
   },
   "keywords": [
@@ -51,37 +53,42 @@
     "url": "https://github.com/probil/vue-socket.io-extended/issues"
   },
   "homepage": "https://github.com/probil/vue-socket.io-extended#readme",
-  "dependencies": {
-    "@types/socket.io-client": "1.4.36"
-  },
   "devDependencies": {
-    "@babel/core": "7.13.14",
-    "@babel/plugin-external-helpers": "7.12.13",
-    "@babel/plugin-proposal-decorators": "7.13.5",
-    "@babel/plugin-proposal-export-namespace-from": "7.12.13",
-    "@babel/preset-env": "7.13.12",
-    "@vue/test-utils": "2.0.0-rc.4",
+    "@babel/core": "7.18.6",
+    "@babel/plugin-external-helpers": "7.18.6",
+    "@babel/plugin-proposal-decorators": "7.18.6",
+    "@babel/plugin-proposal-export-namespace-from": "7.18.6",
+    "@babel/preset-env": "7.18.6",
+    "@vue/test-utils": "2.0.0",
     "babel-eslint": "10.1.0",
     "camelcase": "5.3.1",
-    "conventional-changelog": "3.1.24",
-    "eslint": "7.23.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jest": "24.3.2",
-    "jest": "26.6.3",
-    "rollup": "2.44.0",
+    "conventional-changelog": "3.1.25",
+    "eslint": "8.18.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "26.5.3",
+    "jest": "28.1.2",
+    "rollup": "2.75.7",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-filesize": "9.1.1",
+    "rollup-plugin-filesize": "9.1.2",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-terser": "7.0.2",
-    "vue": "3.0.11",
+    "typescript": "^4.7.4",
+    "vue": "3.2.37",
     "vue-class-component": "8.0.0-rc.1",
-    "vuex": "4.0.0"
+    "vuex": "4.0.2"
+  },
+  "peerDependencies": {
+    "socket.io-client": "^1.0.0",
+    "vue": "^3.0.0"
   },
   "jest": {
     "roots": [
       "<rootDir>/src"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
